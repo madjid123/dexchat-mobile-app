@@ -40,22 +40,21 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(0, 97, 97, 97),
-        title: Center(child: CustomWidget()),
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(30))),
-        actions: [],
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Color.fromARGB(0, 39, 37, 37),
+      //   title: Center(child: CustomWidget()),
+      //   shape: RoundedRectangleBorder(
+      //       borderRadius: BorderRadius.all(Radius.circular(30))),
+      //   actions: [],
+      // ),
 
-      backgroundColor: Color.fromARGB(255, 29, 29, 31),
+      backgroundColor: Color.fromARGB(255, 101, 101, 109),
 
-      body: Center(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
-          widthFactor: 50,
+      body: Align(
+          alignment: Alignment.topCenter,
           child: Container(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text('You have pushed the button this many times:',
@@ -65,23 +64,25 @@ class _MyHomePageState extends State<MyHomePage> {
                         color: Color.fromARGB(255, 202, 202, 202))),
                 Text('$_counter',
                     style: GoogleFonts.poppins(
-                        color: Color(0xFFE4E4E4), fontSize: 40)),
+                        color: Color(0xFFE4E4E4),
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold)),
                 Container(
-                    padding: EdgeInsets.all(50.0),
-                    margin: EdgeInsets.all(50),
                     child: TextField(
-                      style: TextStyle(color: Color(0xFFE4E4E4)),
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        alignLabelWithHint: true,
-                        labelText: "Name",
-                        hintText: "Enter your name",
-                        hintStyle: TextStyle(color: Colors.grey[500]),
-                      ),
-                      onChanged: (value) {
-                        print(value);
-                      },
-                    ))
+                  style: TextStyle(color: Color(0xFFE4E4E4)),
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white12, width: 3),
+                        borderRadius: BorderRadius.all(Radius.circular(20))),
+                    alignLabelWithHint: true,
+                    labelText: "Name",
+                    hintText: "Enter your name",
+                    hintStyle: TextStyle(color: Colors.grey[500]),
+                  ),
+                  onChanged: (value) {
+                    print(value);
+                  },
+                ))
               ],
             ),
           )),
@@ -90,9 +91,9 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: EdgeInsets.zero,
           children: [
             const DrawerHeader(
-              decoration:
-                  BoxDecoration(color: Color.fromARGB(255, 20, 100, 100)),
-              child: Text('Drawer Header'),
+              decoration: BoxDecoration(color: Color.fromARGB(255, 31, 33, 33)),
+              child:
+                  Text('Drawer Header', style: TextStyle(color: Colors.white)),
             ),
             ListTile(
               title: const Text('Item 1'),
@@ -107,6 +108,61 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pop(context);
               },
             ),
+            ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
+            ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
+            ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
+            ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
+            ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
+            ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
+            ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
+            ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
+            ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
+            ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
+            ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  Navigator.pop(context);
+                }),
           ],
         ),
       ),
