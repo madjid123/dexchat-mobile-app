@@ -53,9 +53,15 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Align(
           alignment: Alignment.topCenter,
           child: Container(
+            margin: EdgeInsets.fromLTRB(20, 100, 20, 20),
+            padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(40),
+                border: Border.all(
+                  color: Color.fromARGB(255, 31, 32, 33),
+                  width: 3.0,
+                )),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text('You have pushed the button this many times:',
                     style: GoogleFonts.poppins(
@@ -72,15 +78,22 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: TextField(
                       style: TextStyle(color: Color(0xFFE4E4E4)),
                       decoration: InputDecoration(
+                        fillColor: Colors.cyanAccent,
+                        focusColor: Colors.deepOrange,
+                        prefixIconColor: Colors.black,
+                        focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                width: 2.0, color: Colors.deepOrange)),
                         border: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            color: Colors.white,
-                            width: 2.0,
-                          ),
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
+                            borderSide: BorderSide(
+                              color: Color.fromARGB(255, 207, 64, 64),
+                              width: 4.0,
+                            ),
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            gapPadding: 4),
                         alignLabelWithHint: true,
                         labelText: "Name",
+                        labelStyle: TextStyle(color: Colors.deepOrange),
                         hintText: "Enter your name",
                         hintStyle: TextStyle(color: Colors.grey[500]),
                       ),
