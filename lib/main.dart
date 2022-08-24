@@ -68,21 +68,26 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontSize: 40,
                         fontWeight: FontWeight.bold)),
                 Container(
+                    padding: EdgeInsets.all(10),
                     child: TextField(
-                  style: TextStyle(color: Color(0xFFE4E4E4)),
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white12, width: 3),
-                        borderRadius: BorderRadius.all(Radius.circular(20))),
-                    alignLabelWithHint: true,
-                    labelText: "Name",
-                    hintText: "Enter your name",
-                    hintStyle: TextStyle(color: Colors.grey[500]),
-                  ),
-                  onChanged: (value) {
-                    print(value);
-                  },
-                ))
+                      style: TextStyle(color: Color(0xFFE4E4E4)),
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                            width: 2.0,
+                          ),
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        alignLabelWithHint: true,
+                        labelText: "Name",
+                        hintText: "Enter your name",
+                        hintStyle: TextStyle(color: Colors.grey[500]),
+                      ),
+                      onChanged: (value) {
+                        print(value);
+                      },
+                    ))
               ],
             ),
           )),
