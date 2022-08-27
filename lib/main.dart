@@ -30,6 +30,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  GlobalKey<ScaffoldState> _key = GlobalKey();
 
   void _incrementCounter() {
     setState(() {
@@ -47,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //       borderRadius: BorderRadius.all(Radius.circular(30))),
       //   actions: [],
       // ),
-
+      key: _key,
       backgroundColor: Color.fromARGB(255, 34, 34, 37),
 
       body: Align(
@@ -62,6 +63,17 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
+                    ElevatedButton(
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Icon(
+                          Icons.menu_rounded,
+                          size: 24,
+                          color: Colors.white,
+                        ),
+                      ),
+                      onPressed: () => _key.currentState?.openDrawer(),
+                    ),
                     Text(
                       "hello World",
                       style: TextStyle(color: Colors.white),
@@ -74,14 +86,15 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Expanded(
                 child: Container(
+              // color: Color.fromARGB(36, 80, 80, 80),
+
               margin: EdgeInsets.all(10),
               padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
                   border: Border.all(
-                    color: Color.fromARGB(255, 246, 246, 247),
-                    width: 3.0,
-                  )),
+                      width: 3.0, color: Color.fromARGB(0, 80, 80, 80)),
+                  color: Color.fromARGB(39, 101, 101, 101)),
               child: Expanded(
                   child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -98,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         style: TextStyle(color: Color(0xFFE4E4E4)),
                         decoration: InputDecoration(
                           focusColor: Color.fromARGB(255, 34, 255, 156),
-
+                          fillColor: Colors.white,
                           prefixIconColor: Colors.white,
                           focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -107,10 +120,11 @@ class _MyHomePageState extends State<MyHomePage> {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20))),
                           border: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color.fromARGB(255, 253, 251, 250),
-                                  width: 2),
-                              borderRadius: BorderRadius.circular(20)),
+                            borderSide: BorderSide(
+                                color: Color.fromARGB(255, 253, 251, 250),
+                                width: 2),
+                            // borderRadius: BorderRadius.circular(20),
+                          ),
                           // border: OutlineInputBorder(
                           //     borderSide: BorderSide(
                           //       color: Color.fromARGB(255, 207, 64, 64),
@@ -167,11 +181,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
