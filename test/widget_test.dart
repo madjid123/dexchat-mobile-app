@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:dexchat/main.dart';
+import 'package:dexchat/src/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
@@ -22,7 +22,7 @@ void main() {
     // Tap the '+' icon and trigger a frame.
     await tester.tap(find.byIcon(Icons.add));
     await tester.pump();
-
+    await tester.tap(find.byElementType(OutlinedButton));
     // Verify that our counter has incremented.
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
