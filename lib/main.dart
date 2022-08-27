@@ -63,23 +63,24 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
-                    ElevatedButton(
-                      child: Padding(
-                        padding: const EdgeInsets.all(5.0),
-                        child: Icon(
-                          Icons.menu_rounded,
-                          size: 24,
-                          color: Colors.white,
+                    OutlinedButton(
+                        child: Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Icon(
+                            Icons.menu_rounded,
+                            size: 24,
+                            color: Colors.white,
+                          ),
                         ),
-                      ),
-                      onPressed: () => _key.currentState?.openDrawer(),
-                      style: ElevatedButton.styleFrom(
-                          primary: Color.fromARGB(0, 133, 133, 133)),
-                    ),
-                    Text(
-                      "hello World",
-                      style: TextStyle(color: Colors.white),
-                    ),
+                        onPressed: () => _key.currentState?.openDrawer(),
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(
+                                Color(0x00000000)),
+                            shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20))))),
+                    CustomWidget(),
                     Text(
                       "hello World",
                       style: TextStyle(color: Colors.white),
@@ -145,6 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ])),
       drawer: Drawer(
         backgroundColor: Color.fromARGB(255, 31, 33, 33),
+        elevation: 100,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         child: ListView(
           padding: EdgeInsets.zero,
