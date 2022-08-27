@@ -72,16 +72,19 @@ class _MyHomePageState extends State<MyHomePage> {
                     )
                   ]),
             ),
-            Container(
-              margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
+            Expanded(
+                child: Container(
+              margin: EdgeInsets.all(10),
               padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
                   border: Border.all(
-                    color: Color.fromARGB(255, 31, 32, 33),
+                    color: Color.fromARGB(255, 246, 246, 247),
                     width: 3.0,
                   )),
-              child: Column(
+              child: Expanded(
+                  child: Column(
+                mainAxisSize: MainAxisSize.max,
                 children: <Widget>[
                   Text('Login',
                       style: GoogleFonts.poppins(
@@ -94,15 +97,19 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: TextField(
                         style: TextStyle(color: Color(0xFFE4E4E4)),
                         decoration: InputDecoration(
-                          focusColor: Colors.deepOrange,
+                          focusColor: Color.fromARGB(255, 34, 255, 156),
 
                           prefixIconColor: Colors.white,
                           focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.deepOrange),
+                              borderSide: BorderSide(
+                                  color: Color.fromARGB(255, 34, 255, 156),
+                                  width: 2),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(20))),
                           border: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.deepOrange),
+                              borderSide: BorderSide(
+                                  color: Color.fromARGB(255, 253, 251, 250),
+                                  width: 2),
                               borderRadius: BorderRadius.circular(20)),
                           // border: OutlineInputBorder(
                           //     borderSide: BorderSide(
@@ -113,8 +120,10 @@ class _MyHomePageState extends State<MyHomePage> {
                           //     BorderRadius.all(Radius.circular(20)),
                           // gapPadding: 4),
                           alignLabelWithHint: true,
-                          labelText: "Name",
-                          labelStyle: TextStyle(color: Colors.deepOrange),
+                          // labelText: "Name",
+                          labelStyle: TextStyle(
+                              color: Color.fromARGB(255, 34, 255, 156)),
+
                           hintText: "Enter your name",
                           hintStyle: TextStyle(color: Colors.grey[500]),
                         ),
@@ -123,10 +132,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                       ))
                 ],
-              ),
-            )
+              )),
+            ))
           ])),
       drawer: Drawer(
+        backgroundColor: Color.fromARGB(255, 31, 33, 33),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -148,56 +159,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pop(context);
               },
             ),
-            ListTile(
-                title: const Text('Item 2'),
-                onTap: () {
-                  Navigator.pop(context);
-                }),
-            ListTile(
-                title: const Text('Item 2'),
-                onTap: () {
-                  Navigator.pop(context);
-                }),
-            ListTile(
-                title: const Text('Item 2'),
-                onTap: () {
-                  Navigator.pop(context);
-                }),
-            ListTile(
-                title: const Text('Item 2'),
-                onTap: () {
-                  Navigator.pop(context);
-                }),
-            ListTile(
-                title: const Text('Item 2'),
-                onTap: () {
-                  Navigator.pop(context);
-                }),
-            ListTile(
-                title: const Text('Item 2'),
-                onTap: () {
-                  Navigator.pop(context);
-                }),
-            ListTile(
-                title: const Text('Item 2'),
-                onTap: () {
-                  Navigator.pop(context);
-                }),
-            ListTile(
-                title: const Text('Item 2'),
-                onTap: () {
-                  Navigator.pop(context);
-                }),
-            ListTile(
-                title: const Text('Item 2'),
-                onTap: () {
-                  Navigator.pop(context);
-                }),
-            ListTile(
-                title: const Text('Item 2'),
-                onTap: () {
-                  Navigator.pop(context);
-                }),
             ListTile(
                 title: const Text('Item 2'),
                 onTap: () {
