@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(primaryColor: Color(0xFF362929)),
+      theme: ThemeData(primaryColor: Color.fromARGB(255, 23, 253, 169)),
       home: MyHomePage(title: 'dexchat Hello'),
     );
   }
@@ -73,6 +73,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                       onPressed: () => _key.currentState?.openDrawer(),
+                      style: ElevatedButton.styleFrom(
+                          primary: Color.fromARGB(0, 133, 133, 133)),
                     ),
                     Text(
                       "hello World",
@@ -125,14 +127,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                 width: 2),
                             // borderRadius: BorderRadius.circular(20),
                           ),
-                          // border: OutlineInputBorder(
-                          //     borderSide: BorderSide(
-                          //       color: Color.fromARGB(255, 207, 64, 64),
-                          //       width: 4.0,
-                          //     ),
-                          // borderRadius:
-                          //     BorderRadius.all(Radius.circular(20)),
-                          // gapPadding: 4),
                           alignLabelWithHint: true,
                           // labelText: "Name",
                           labelStyle: TextStyle(
