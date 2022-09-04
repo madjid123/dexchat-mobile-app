@@ -1,16 +1,9 @@
 # Dexchat
 
-A Flutter App project implementation of DexChat web application.
+A Flutter App project implementation of [DexChat](https://github.com/madjid123/dexchat-full.git) web application.
 
-## Getting Started
+## Description
 
-This project is a starting point for a Flutter application.
+This project is a mobile implementation of my MERN stack app [**Dex Chat**](https://github.com/madjid123/dexchat-full.git).
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The implementation will be as minimal as possible as the purpose of this project is only to learn flutter by doing a useful yet cool project like chat-app.
