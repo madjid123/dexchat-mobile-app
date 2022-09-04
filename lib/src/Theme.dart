@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class GalleryThemeData {
+class DexChatThemeData {
   static const _lightFillColor = Colors.black;
   static const _darkFillColor = Colors.white;
 
