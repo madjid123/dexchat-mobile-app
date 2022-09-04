@@ -8,6 +8,6 @@ This project is a mobile implementation of my MERN stack app [**Dex Chat**](http
 
 The implementation will be as minimal as possible as the purpose of this project is only to learn flutter by doing a useful yet cool project like chat-app.
 ## TODO
-- [-] Create the necessary pages.
-- [-] Create data providers.
-- [-] handle state and logic of The UI.
+- [ ] Create the necessary pages.
+- [ ] Create data providers.
+- [ ] handle state and logic of The UI.
