@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'CustomWidget.dart';
+import './widgets/CustomWidget.dart';
 
 void main() {
   runApp(MyApp());
