@@ -1,6 +1,6 @@
-# dexchat
+# Dexchat
 
-A new Flutter project.
+A Flutter App project implementation of DexChat web application.
 
 ## Getting Started
 
